@@ -5,5 +5,5 @@ project(test_cpp)
 
 include_directories("test_cpp")
 
-add_executable(hello_cpp test_cpp/hello.cpp)
-add_executable(test_cpp test_cpp/test.cpp)
+add_executable(hello_cpp hello.cpp)
+add_executable(test_cpp test.cpp)

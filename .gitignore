@@ -1,9 +1,10 @@
 # ajz34
-test*
+test*/
 .idea
 
 # ajz34 IDE Setting
 cmake-build-debug
+target
 
 # Prerequisites
 *.d
