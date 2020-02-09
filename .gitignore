@@ -6,6 +6,10 @@ test*/
 cmake-build-debug
 target
 
+# ajz34 Rust
+target/
+**/*.rs.bk
+
 # Prerequisites
 *.d
 

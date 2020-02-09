@@ -5,7 +5,7 @@ project(test_cpp)
 
 include_directories("src")
 add_executable(main
-        src/0001_0100/0001_two_sum.h
+        src/e0001_e0100/e0001_two_sum.h
         src/main.cpp
         src/main.h)
 
