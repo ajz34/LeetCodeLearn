@@ -3,7 +3,10 @@ set(CMAKE_CXX_STANDARD 14)
 
 project(test_cpp)
 
-include_directories("test_cpp")
+include_directories("src")
+add_executable(main
+        src/0001_0100/0001_two_sum.h
+        src/main.cpp
+        src/main.h)
 
-add_executable(hello_cpp hello.cpp)
-add_executable(test_cpp test.cpp)
+add_subdirectory(Google_tests)
