@@ -2,13 +2,18 @@
 // Created by ajz34 on 2020/2/9.
 //
 
-#include "0001_0100/0001_two_sum.h"
+#include "e0001_e0100/e0002_add_two_numbers.h"
 #include "main.h"
 
 #include <vector>
 using namespace std;
 
 int main() {
-    auto vec = vector<int>{ 2, 7, 11, 15 };
-    cout << Solution().twoSum(vec, 9) << endl;
+    auto l1 = new ListNode(2);
+    l1->next = new ListNode(4);
+    l1->next->next = new ListNode(3);
+    auto l2 = new ListNode(5);
+    l2->next = new ListNode(6);
+    l2->next->next = new ListNode(4);
+    Solution().addTwoNumbers(l1, l2);
 }
