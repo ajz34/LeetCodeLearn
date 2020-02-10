@@ -5,8 +5,7 @@ project(test_cpp)
 
 include_directories("src")
 add_executable(main
-        src/e0001_e0100/e0002_add_two_numbers.h
         src/main.cpp
-        src/main.h src/e0001_e0100/e0003_longest_string.h)
+        src/e0001_e0100/e0004_array_median.h)
 
 add_subdirectory(Google_tests)
