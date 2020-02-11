@@ -6,6 +6,6 @@ project(test_cpp)
 include_directories("src")
 add_executable(main
         src/main.cpp
-        src/e0001_e0100/e0012_int_to_roman.h)
+        src/e0001_e0100/e0013_roman_to_int.h)
 
 add_subdirectory(Google_tests)
