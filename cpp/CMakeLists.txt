@@ -6,6 +6,6 @@ project(test_cpp)
 include_directories("src")
 add_executable(main
         src/main.cpp
-        src/e0001_e0100/e0007_reverse_integer.h)
+        src/e0001_e0100/e0007_reverse_integer.h src/e0001_e0100/e0008_string_to_integer.h)
 
 add_subdirectory(Google_tests)
