@@ -6,6 +6,6 @@ project(test_cpp)
 include_directories("src")
 add_executable(main
         src/main.cpp
-        src/e0001_e0100/e0009_palindrome_number.h)
+        src/e0001_e0100/e0009_palindrome_number.h src/e0001_e0100/e0010_reg_expr_match.h)
 
 add_subdirectory(Google_tests)

@@ -15,5 +15,6 @@ add_executable(test_e0001_e0100
         e0001_e0100/test_e0006.cpp
         e0001_e0100/test_e0007.cpp
         e0001_e0100/test_e0008.cpp
-        e0001_e0100/test_e0009.cpp)
+        e0001_e0100/test_e0009.cpp
+        e0001_e0100/test_e0010.cpp)
 target_link_libraries(test_e0001_e0100 gtest gtest_main)
