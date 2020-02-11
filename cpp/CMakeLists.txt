@@ -6,6 +6,6 @@ project(test_cpp)
 include_directories("src")
 add_executable(main
         src/main.cpp
-        src/e0001_e0100/e0004_array_median.h)
+        src/e0001_e0100/e0005_palindromic_substring.h)
 
 add_subdirectory(Google_tests)
