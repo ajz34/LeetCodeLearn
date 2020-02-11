@@ -6,6 +6,6 @@ project(test_cpp)
 include_directories("src")
 add_executable(main
         src/main.cpp
-        src/e0001_e0100/e0005_palindromic_substring.h)
+        src/e0001_e0100/e0006_zigzag_conversion.h)
 
 add_subdirectory(Google_tests)
