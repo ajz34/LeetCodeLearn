@@ -6,6 +6,6 @@ project(test_cpp)
 include_directories("src")
 add_executable(main
         src/main.cpp
-        src/e0001_e0100/e0015_three_sum.h)
+        src/e0001_e0100/e0016_three_sum_closest.h)
 
 add_subdirectory(Google_tests)
