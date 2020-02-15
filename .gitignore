@@ -8,7 +8,6 @@ target
 out/
 Debug/
 packages
-*.filters
 
 # ajz34 Rust
 target/

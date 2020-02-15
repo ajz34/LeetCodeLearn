@@ -87,6 +87,9 @@
     <ClInclude Include="src\main.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="src\e0001_e0100\e0023.h">
+      <Filter>头文件\e0001_e0100</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\main.cpp">
