@@ -77,6 +77,9 @@
     <ClCompile Include="e0001_e0100\test_e0024.cpp">
       <Filter>e0001_e0100</Filter>
     </ClCompile>
+    <ClCompile Include="e0001_e0100\test_e0025.cpp">
+      <Filter>e0001_e0100</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h" />

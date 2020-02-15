@@ -19,7 +19,7 @@ using namespace std;
 
 template <typename T>
 ostream& operator<<(ostream& os, const vector<T>& vec) {
-    for (int idx = 0; idx < vec.size(); ++idx) {
+    for (size_t idx = 0; idx < vec.size(); ++idx) {
         os << vec[idx];
         if (idx < vec.size() - 1) os << ", ";
     }
@@ -32,7 +32,7 @@ struct ListNode {
     ListNode(int x) : val(x), next(nullptr) {}
     ListNode(const vector<int>& v) : val(v[0]), next(nullptr) {
         auto p = this;
-        for (int i = 1; i < v.size(); ++i) {
+        for (size_t i = 1; i < v.size(); ++i) {
             p->next = new ListNode(v[i]);
             p = p->next;
         }
