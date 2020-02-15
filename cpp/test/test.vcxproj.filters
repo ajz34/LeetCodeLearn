@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="test.cpp" />
+    <ClCompile Include="pch.cpp" />
+    <ClCompile Include="e0001_e0100\test_e0001.cpp">
+      <Filter>e0001_e0100</Filter>
+    </ClCompile>
+    <ClCompile Include="e0001_e0100\test_e0002.cpp">
+      <Filter>e0001_e0100</Filter>
+    </ClCompile>
+    <ClCompile Include="e0001_e0100\test_e0003.cpp">
+      <Filter>e0001_e0100</Filter>
+    </ClCompile>
+    <ClCompile Include="e0001_e0100\test_e0004.cpp">
+      <Filter>e0001_e0100</Filter>
+    </ClCompile>
+    <ClCompile Include="e0001_e0100\test_e0005.cpp">
+      <Filter>e0001_e0100</Filter>
+    </ClCompile>
+    <ClCompile Include="e0001_e0100\test_e0006.cpp">
+      <Filter>e0001_e0100</Filter>
+    </ClCompile>
+    <ClCompile Include="e0001_e0100\test_e0007.cpp">
+      <Filter>e0001_e0100</Filter>
+    </ClCompile>
+    <ClCompile Include="e0001_e0100\test_e0008.cpp">
+      <Filter>e0001_e0100</Filter>
+    </ClCompile>
+    <ClCompile Include="e0001_e0100\test_e0009.cpp">
+      <Filter>e0001_e0100</Filter>
+    </ClCompile>
+    <ClCompile Include="e0001_e0100\test_e0010.cpp">
+      <Filter>e0001_e0100</Filter>
+    </ClCompile>
+    <ClCompile Include="e0001_e0100\test_e0011.cpp">
+      <Filter>e0001_e0100</Filter>
+    </ClCompile>
+    <ClCompile Include="e0001_e0100\test_e0012.cpp">
+      <Filter>e0001_e0100</Filter>
+    </ClCompile>
+    <ClCompile Include="e0001_e0100\test_e0013.cpp">
+      <Filter>e0001_e0100</Filter>
+    </ClCompile>
+    <ClCompile Include="e0001_e0100\test_e0014.cpp">
+      <Filter>e0001_e0100</Filter>
+    </ClCompile>
+    <ClCompile Include="e0001_e0100\test_e0015.cpp">
+      <Filter>e0001_e0100</Filter>
+    </ClCompile>
+    <ClCompile Include="e0001_e0100\test_e0016.cpp">
+      <Filter>e0001_e0100</Filter>
+    </ClCompile>
+    <ClCompile Include="e0001_e0100\test_e0017.cpp">
+      <Filter>e0001_e0100</Filter>
+    </ClCompile>
+    <ClCompile Include="e0001_e0100\test_e0018.cpp">
+      <Filter>e0001_e0100</Filter>
+    </ClCompile>
+    <ClCompile Include="e0001_e0100\test_e0019.cpp">
+      <Filter>e0001_e0100</Filter>
+    </ClCompile>
+    <ClCompile Include="e0001_e0100\test_e0020.cpp">
+      <Filter>e0001_e0100</Filter>
+    </ClCompile>
+    <ClCompile Include="e0001_e0100\test_e0021.cpp">
+      <Filter>e0001_e0100</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="pch.h" />
+    <ClInclude Include="e0001_e0100\pch.h">
+      <Filter>e0001_e0100</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="e0001_e0100">
+      <UniqueIdentifier>{9f51b54f-3dcf-4d54-ba16-e58e89ea22e8}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
