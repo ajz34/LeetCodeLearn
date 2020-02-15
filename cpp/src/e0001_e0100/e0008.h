@@ -27,7 +27,7 @@ public:
             if ('0' <= str[i] && str[i] <= '9') continue;
             break;
         }
-        str = str.substr(sgn_char, i + 1 - sgn_char);
+        str = str.substr(sgn_char, size_t(i) + 1 - sgn_char);
         // 3. trim left zeros
         for (i = 0; i < str.size(); ++i)
             if (str[i] != '0') break;
@@ -37,9 +37,9 @@ public:
         // 5. exclude digit number > 12
         if (str.size() > 12) return sgn < 0 ? -2147483648 : 2147483647;
         // 6. first atol, then ltoi
-        long l = atol(str.c_str()) * sgn;
+        long long l = atoll(str.c_str()) * sgn;
         if (l > 2147483647) return 2147483647;
-        else if (l < -2147483648) return -2147483648;
+        else if (l < -2147483647) return -2147483648;
         else return int(l);
     }
 };

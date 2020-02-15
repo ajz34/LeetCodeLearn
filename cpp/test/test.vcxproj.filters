@@ -66,6 +66,8 @@
     <ClCompile Include="e0001_e0100\test_e0021.cpp">
       <Filter>e0001_e0100</Filter>
     </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\lib\native\src\gtest\gtest-all.cc" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\lib\native\src\gmock\gmock-all.cc" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h" />
@@ -77,5 +79,8 @@
     <Filter Include="e0001_e0100">
       <UniqueIdentifier>{9f51b54f-3dcf-4d54-ba16-e58e89ea22e8}</UniqueIdentifier>
     </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
 </Project>

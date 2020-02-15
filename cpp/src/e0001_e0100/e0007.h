@@ -22,8 +22,7 @@ public:
             x_ /= 10;
         }
         if (r > (long long)(pow(2, 31) - 1)) return 0;
-        // return sgn ? r : -r;
-        return -1;
+        return sgn ? r : -r;
     }
 };
 

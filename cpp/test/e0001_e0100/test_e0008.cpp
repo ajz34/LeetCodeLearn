@@ -6,6 +6,7 @@
 #include "../../src/e0001_e0100/e0008.h"
 
 TEST(e0001_e0100, e0008) {
+    auto a = Solution().myAtoi("42");
     ASSERT_EQ(Solution().myAtoi("42"), 42);
     ASSERT_EQ(Solution().myAtoi("   -42"), -42);
     ASSERT_EQ(Solution().myAtoi("4193 with words"), 4193);
