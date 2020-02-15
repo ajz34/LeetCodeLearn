@@ -1,10 +1,12 @@
 # ajz34
 test*/
-.idea
 
 # ajz34 IDE Setting
+.idea
+.vs
 cmake-build-debug
 target
+out/
 
 # ajz34 Rust
 target/
