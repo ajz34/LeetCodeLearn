@@ -58,6 +58,7 @@
     <ClCompile Include="e0001_e0100\test_e0019.cpp" />
     <ClCompile Include="e0001_e0100\test_e0020.cpp" />
     <ClCompile Include="e0001_e0100\test_e0021.cpp" />
+    <ClCompile Include="e0001_e0100\test_e0022.cpp" />
     <ClCompile Include="test.cpp" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>

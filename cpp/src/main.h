@@ -22,10 +22,8 @@ ostream& operator<<(ostream& os, const vector<T>& vec) {
 struct ListNode {
     int val;
     ListNode *next;
-    explicit ListNode(int x) : val(x), next(nullptr) {}
-    explicit ListNode(const vector<int>& v) {
-        assert(!v.empty());
-        this->val = v[0];
+    ListNode(int x) : val(x), next(nullptr) {}
+    ListNode(const vector<int>& v) : val(v[0]), next(nullptr) {
         auto p = this;
         for (int i = 1; i < v.size(); ++i) {
             p->next = new ListNode(v[i]);
