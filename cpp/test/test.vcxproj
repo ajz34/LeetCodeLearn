@@ -19,7 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{3af378e9-51f5-427f-b274-ccfb28e82eb1}</ProjectGuid>
+    <ProjectGuid>{882b98bc-16fc-4d5c-a1bc-68883ae83a20}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
     <ConfigurationType>Application</ConfigurationType>
@@ -32,51 +32,42 @@
   <ImportGroup Label="Shared" />
   <ImportGroup Label="PropertySheets" />
   <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)\src</IncludePath>
+  </PropertyGroup>
   <ItemGroup>
-    <ClInclude Include="e0001_e0100\pch.h" />
-    <ClInclude Include="pch.h" />
+    <ClInclude Include="..\src\extern.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="e0001_e0100\test_e0001.cpp" />
-    <ClCompile Include="e0001_e0100\test_e0002.cpp" />
-    <ClCompile Include="e0001_e0100\test_e0003.cpp" />
-    <ClCompile Include="e0001_e0100\test_e0004.cpp" />
-    <ClCompile Include="e0001_e0100\test_e0005.cpp" />
-    <ClCompile Include="e0001_e0100\test_e0006.cpp" />
-    <ClCompile Include="e0001_e0100\test_e0007.cpp" />
-    <ClCompile Include="e0001_e0100\test_e0008.cpp" />
-    <ClCompile Include="e0001_e0100\test_e0009.cpp" />
-    <ClCompile Include="e0001_e0100\test_e0010.cpp" />
-    <ClCompile Include="e0001_e0100\test_e0011.cpp" />
-    <ClCompile Include="e0001_e0100\test_e0012.cpp" />
-    <ClCompile Include="e0001_e0100\test_e0013.cpp" />
-    <ClCompile Include="e0001_e0100\test_e0014.cpp" />
-    <ClCompile Include="e0001_e0100\test_e0015.cpp" />
-    <ClCompile Include="e0001_e0100\test_e0016.cpp" />
-    <ClCompile Include="e0001_e0100\test_e0017.cpp" />
-    <ClCompile Include="e0001_e0100\test_e0018.cpp" />
-    <ClCompile Include="e0001_e0100\test_e0019.cpp" />
-    <ClCompile Include="e0001_e0100\test_e0020.cpp" />
-    <ClCompile Include="e0001_e0100\test_e0021.cpp" />
-    <ClCompile Include="e0001_e0100\test_e0022.cpp" />
-    <ClCompile Include="e0001_e0100\test_e0023.cpp" />
-    <ClCompile Include="e0001_e0100\test_e0024.cpp" />
-    <ClCompile Include="e0001_e0100\test_e0025.cpp" />
-    <ClCompile Include="test.cpp" />
-    <ClCompile Include="pch.cpp">
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
-    </ClCompile>
+    <ClCompile Include="..\src\exercise\e0100\e0001.cpp" />
+    <ClCompile Include="..\src\exercise\e0100\e0002.cpp" />
+    <ClCompile Include="..\src\exercise\e0100\e0003.cpp" />
+    <ClCompile Include="..\src\exercise\e0100\e0004.cpp" />
+    <ClCompile Include="..\src\exercise\e0100\e0005.cpp" />
+    <ClCompile Include="..\src\exercise\e0100\e0006.cpp" />
+    <ClCompile Include="..\src\exercise\e0100\e0007.cpp" />
+    <ClCompile Include="..\src\exercise\e0100\e0008.cpp" />
+    <ClCompile Include="..\src\exercise\e0100\e0009.cpp" />
+    <ClCompile Include="..\src\exercise\e0100\e0010.cpp" />
+    <ClCompile Include="..\src\exercise\e0100\e0011.cpp" />
+    <ClCompile Include="..\src\exercise\e0100\e0012.cpp" />
+    <ClCompile Include="..\src\exercise\e0100\e0013.cpp" />
+    <ClCompile Include="..\src\exercise\e0100\e0014.cpp" />
+    <ClCompile Include="..\src\exercise\e0100\e0015.cpp" />
+    <ClCompile Include="..\src\exercise\e0100\e0016.cpp" />
+    <ClCompile Include="..\src\exercise\e0100\e0017.cpp" />
+    <ClCompile Include="..\src\exercise\e0100\e0018.cpp" />
+    <ClCompile Include="..\src\exercise\e0100\e0019.cpp" />
+    <ClCompile Include="..\src\exercise\e0100\e0020.cpp" />
+    <ClCompile Include="..\src\exercise\e0100\e0021.cpp" />
+    <ClCompile Include="..\src\exercise\e0100\e0022.cpp" />
+    <ClCompile Include="..\src\exercise\e0100\e0023.cpp" />
+    <ClCompile Include="..\src\exercise\e0100\e0024.cpp" />
+    <ClCompile Include="..\src\exercise\e0100\e0025.cpp" />
+    <ClCompile Include="..\src\extern.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\cpp.vcxproj">
-      <Project>{98d50a4f-522b-41f8-8e9a-349fbe218577}</Project>
-    </ProjectReference>
   </ItemGroup>
   <ItemDefinitionGroup />
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
@@ -86,7 +77,7 @@
   </ImportGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
-      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
