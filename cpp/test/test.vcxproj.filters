@@ -79,6 +79,20 @@
     <ClCompile Include="..\src\exercise\e0100\e0025.cpp">
       <Filter>源文件\exercise\e0100</Filter>
     </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\lib\native\src\gtest\gtest-all.cc" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\lib\native\src\gmock\gmock-all.cc" />
+    <ClCompile Include="..\src\competition\week_176\e5340.cpp">
+      <Filter>源文件\competition\week176</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\competition\week_176\e5341.cpp">
+      <Filter>源文件\competition\week176</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\competition\week_176\e5342.cpp">
+      <Filter>源文件\competition\week176</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\competition\week_176\e5343.cpp">
+      <Filter>源文件\competition\week176</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\src\extern.h">
@@ -100,6 +114,12 @@
     </Filter>
     <Filter Include="源文件\exercise\e0100">
       <UniqueIdentifier>{d7f63089-cb4c-4757-b1f6-e53d86c82011}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\competition">
+      <UniqueIdentifier>{2292c383-cd5a-46bb-96a3-1b74281cff50}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\competition\week176">
+      <UniqueIdentifier>{bdb5b570-a019-4554-af13-6167385e5fd7}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

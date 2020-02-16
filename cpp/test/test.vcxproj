@@ -39,6 +39,10 @@
     <ClInclude Include="..\src\extern.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\src\competition\week_176\e5340.cpp" />
+    <ClCompile Include="..\src\competition\week_176\e5341.cpp" />
+    <ClCompile Include="..\src\competition\week_176\e5342.cpp" />
+    <ClCompile Include="..\src\competition\week_176\e5343.cpp" />
     <ClCompile Include="..\src\exercise\e0100\e0001.cpp" />
     <ClCompile Include="..\src\exercise\e0100\e0002.cpp" />
     <ClCompile Include="..\src\exercise\e0100\e0003.cpp" />
