@@ -88,7 +88,7 @@ public:
 };
 
 TEST(e0100, e0018) {
-    vector<int> v = str_to_vect<int>("[1, 0, -1, 0, -2, 2]");
+    vector<int> v = str_to_vec<int>("[1, 0, -1, 0, -2, 2]");
     vector<vector<int>> res_vector = Solution().fourSum(v, 0);
     vector<vector<int>> ans_vector = str_to_mat<int>(
     "[                  \

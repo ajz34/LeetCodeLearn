@@ -13,8 +13,8 @@ public:
 };
 
 TEST(e0100, e0001) {
-    auto vec = str_to_vect<int>("[2, 7, 11, 15]");
-    auto ans = str_to_vect<int>("[0, 1]");
+    auto vec = str_to_vec<int>("[2, 7, 11, 15]");
+    auto ans = str_to_vec<int>("[0, 1]");
     auto sol = Solution().twoSum(vec, 9);
     ASSERT_THAT(sol, ans);
 }

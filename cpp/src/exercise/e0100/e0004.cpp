@@ -32,10 +32,10 @@ public:
 
 TEST(e0100, e0004) {
     vector<int> n1{}, n2{};
-    n1 = str_to_vect<int>("[1, 3]");
-    n2 = str_to_vect<int>("[2]");
+    n1 = str_to_vec<int>("[1, 3]");
+    n2 = str_to_vec<int>("[2]");
     ASSERT_EQ(Solution().findMedianSortedArrays(n1, n2), 2);
-    n1 = str_to_vect<int>("[1, 2]");
-    n2 = str_to_vect<int>("[3, 4]");
+    n1 = str_to_vec<int>("[1, 2]");
+    n2 = str_to_vec<int>("[3, 4]");
     ASSERT_EQ(Solution().findMedianSortedArrays(n1, n2), 2.5);
 }

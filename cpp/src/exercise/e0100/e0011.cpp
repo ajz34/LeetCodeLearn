@@ -32,6 +32,6 @@ public:
 };
 
 TEST(e0100, e0011) {
-    vector<int> v = str_to_vect<int>("[1,8,6,2,5,4,8,3,7]");
+    vector<int> v = str_to_vec<int>("[1,8,6,2,5,4,8,3,7]");
     ASSERT_EQ(Solution().maxArea(v), 49);
 }

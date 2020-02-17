@@ -105,8 +105,9 @@ struct Converter<string> {
 };
 
 template<class T>
-vector<T> str_to_vect(const string& s) {
+vector<T> str_to_vec(const string& s) {
     assert(s.size() >= 2);
+    if (s.size() == 2) return {};
     assert(s.front() == '[' && s.back() == ']');
     vector<T> result{};
     stringstream ss(s.substr(1, s.size() - 2));
@@ -126,7 +127,7 @@ vector<vector<T>> str_to_mat(const string& s) {
     size_t il = 1, ir = 1;
     for (; ir < s.size() - 1; ++ir) {
         if (s[ir] == '[') il = ir;
-        else if (s[ir] == ']') result.push_back(str_to_vect<T>(s.substr(il, ir - il + 1)));
+        else if (s[ir] == ']') result.push_back(str_to_vec<T>(s.substr(il, ir - il + 1)));
     }
     return result;
 }

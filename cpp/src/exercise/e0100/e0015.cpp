@@ -91,11 +91,11 @@ public:
 };
 
 TEST(e0100, e0015) {
-    vector<int> v = str_to_vect<int>("[-1, 0, 1, 2, -1, -4]");
+    vector<int> v = str_to_vec<int>("[-1, 0, 1, 2, -1, -4]");
     vector<vector<int>> res_vector = Solution().threeSum(v);
     set<vector<int>> res{ res_vector.begin(), res_vector.end() };
     set<vector<int>> ans{
-        str_to_vect<int>("[-1, 0, 1]"),
-        str_to_vect<int>("[-1, -1, 2]") };
+        str_to_vec<int>("[-1, 0, 1]"),
+        str_to_vec<int>("[-1, -1, 2]") };
     ASSERT_THAT(res, ans);
 }

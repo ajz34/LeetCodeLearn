@@ -17,8 +17,8 @@ public:
 };
 
 TEST(e0100, e0019) {
-    auto head = new ListNode(str_to_vect<int>("[1, 2, 3, 4, 5]"));
+    auto head = new ListNode(str_to_vec<int>("[1, 2, 3, 4, 5]"));
     auto res = Solution().removeNthFromEnd(head, 2);
-    auto ans = new ListNode(str_to_vect<int>("[1, 2, 3, 5]"));
+    auto ans = new ListNode(str_to_vec<int>("[1, 2, 3, 5]"));
     ASSERT_THAT(res->to_vector(), ans->to_vector());
 }

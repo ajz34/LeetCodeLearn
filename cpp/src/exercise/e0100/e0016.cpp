@@ -28,6 +28,6 @@ public:
 };
 
 TEST(e0100, e0016) {
-    vector<int> v = str_to_vect<int>("[-1, 2, 1, -4]");
+    vector<int> v = str_to_vec<int>("[-1, 2, 1, -4]");
     ASSERT_EQ(Solution().threeSumClosest(v, 1), 2);
 }

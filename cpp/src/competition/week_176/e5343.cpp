@@ -27,11 +27,11 @@ public:
 };
 
 TEST(week176, e5343) {
-    auto v = str_to_vect<int>("[9,3,5]");
+    auto v = str_to_vec<int>("[9,3,5]");
     ASSERT_TRUE(Solution().isPossible(v));
-    v = str_to_vect<int>("[1,1,1,2]");
+    v = str_to_vec<int>("[1,1,1,2]");
     ASSERT_FALSE(Solution().isPossible(v));
-    v = str_to_vect<int>("[8,5]");
+    v = str_to_vec<int>("[8,5]");
     ASSERT_TRUE(Solution().isPossible(v));
 }
 
