@@ -28,10 +28,13 @@ using namespace std;
 
 template <typename T>
 ostream& operator<<(ostream& os, const vector<T>& vec) {
+    if (vec.empty()) return (os << "[]");
+    os << "[ ";
     for (size_t idx = 0; idx < vec.size(); ++idx) {
         os << vec[idx];
         if (idx < vec.size() - 1) os << ", ";
     }
+    os << " ]";
     return os;
 }
 
