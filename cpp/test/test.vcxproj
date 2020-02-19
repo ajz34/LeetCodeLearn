@@ -78,6 +78,7 @@
     <ClCompile Include="..\src\exercise\e0100\e0033.cpp" />
     <ClCompile Include="..\src\exercise\e0100\e0034.cpp" />
     <ClCompile Include="..\src\exercise\e0100\e0035.cpp" />
+    <ClCompile Include="..\src\exercise\e0100\e0036.cpp" />
     <ClCompile Include="..\src\extern.cpp" />
   </ItemGroup>
   <ItemGroup>

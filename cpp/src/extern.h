@@ -107,6 +107,19 @@ struct Converter<string> {
     }
 };
 
+template<>
+struct Converter<char> {
+    inline char operator()(const string& s) {
+        assert(!s.empty());
+        if (s.front() == s.back() && (s.front() == '\"' || s.front() == '\'')) {
+            assert(s.size() == 3);
+            return s[1];
+        }
+        assert(s.size() == 1);
+        return s[0];
+    }
+};
+
 template<class T>
 vector<T> str_to_vec(const string& s) {
     assert(s.size() >= 2);
