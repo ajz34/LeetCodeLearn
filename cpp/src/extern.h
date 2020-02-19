@@ -121,7 +121,8 @@ struct Converter<char> {
 };
 
 template<class T>
-vector<T> str_to_vec(const string& s) {
+vector<T> str_to_vec(string&& s_) {
+    auto s = trim(s_);
     assert(s.size() >= 2);
     if (s.size() == 2) return {};
     assert(s.front() == '[' && s.back() == ']');
@@ -136,7 +137,8 @@ vector<T> str_to_vec(const string& s) {
 }
 
 template<class T>
-vector<vector<T>> str_to_mat(const string& s) {
+vector<vector<T>> str_to_mat(string&& s_) {
+    auto s = trim(s_);
     assert(s.size() >= 2);
     assert(s.front() == '[' && s.back() == ']');
     vector<vector<T>> result{};
