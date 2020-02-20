@@ -153,6 +153,9 @@
     <ClCompile Include="..\src\exercise\e0100\e0045.cpp">
       <Filter>源文件\exercise\e0100</Filter>
     </ClCompile>
+    <ClCompile Include="..\src\exercise\e0100\e0046.cpp">
+      <Filter>源文件\exercise\e0100</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\src\extern.h">
