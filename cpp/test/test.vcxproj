@@ -95,6 +95,7 @@
     <ClCompile Include="..\src\exercise\e0100\e0050.cpp" />
     <ClCompile Include="..\src\exercise\e0100\e0051.cpp" />
     <ClCompile Include="..\src\exercise\e0100\e0052.cpp" />
+    <ClCompile Include="..\src\exercise\e0100\e0053.cpp" />
     <ClCompile Include="..\src\extern.cpp" />
   </ItemGroup>
   <ItemGroup>
