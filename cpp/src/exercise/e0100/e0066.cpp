@@ -15,7 +15,7 @@ public:
     }
 };
 
-TEST(e0100, e0065) {
+TEST(e0100, e0066) {
     vector<int> digits, ans;
     digits = str_to_vec<int>("[1,2,3]");
     ans = str_to_vec<int>("[1,2,4]");
