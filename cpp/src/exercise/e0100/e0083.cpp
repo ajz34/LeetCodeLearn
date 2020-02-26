@@ -2,7 +2,7 @@
 
 #include "extern.h"
 
-class Solution {
+class S0083 {
 public:
     ListNode* deleteDuplicates(ListNode* head) {
         if (!head) return head;
@@ -22,8 +22,8 @@ TEST(e0100, e0083) {
     ListNode* head; vector<int> ans;
     head = new ListNode(str_to_vec<int>("[1,1,2]"));
     ans = str_to_vec<int>("[1,2]");
-    ASSERT_THAT(Solution().deleteDuplicates(head)->to_vector(), ans);
+    ASSERT_THAT(S0083().deleteDuplicates(head)->to_vector(), ans);
     head = new ListNode(str_to_vec<int>("[1,1,2,3,3]"));
     ans = str_to_vec<int>("[1,2,3]");
-    ASSERT_THAT(Solution().deleteDuplicates(head)->to_vector(), ans);
+    ASSERT_THAT(S0083().deleteDuplicates(head)->to_vector(), ans);
 }
