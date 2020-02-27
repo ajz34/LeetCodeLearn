@@ -24,64 +24,6 @@ using namespace testing;
 #include <cassert>
 using namespace std;
 
-#pragma region Display
-
-template <typename T>
-ostream& operator<<(ostream& os, const vector<T>& vec) {
-    if (vec.empty()) return (os << "[]");
-    os << "[ ";
-    for (size_t idx = 0; idx < vec.size(); ++idx) {
-        os << vec[idx];
-        if (idx < vec.size() - 1) os << ", ";
-    }
-    os << " ]";
-    return os;
-}
-
-template <typename T>
-ostream& operator<<(ostream& os, const vector<vector<T>>& vec) {
-    for (size_t idx = 0; idx < vec.size(); ++idx) {
-        if (idx == 0) {
-            os << "[-> " << vec[idx];
-            if (vec.size() == 1) os << " <-]";
-            else os << endl;
-        }
-        else if (idx == vec.size() - 1)
-            os << "[<- " << vec[idx];
-        else
-            os << "[   " << vec[idx] << endl;
-    }
-    return os;
-}
-
-#pragma endregion
-
-#pragma region ListNode
-
-struct ListNode {
-    int val;
-    ListNode* next;
-    ListNode(int x) : val(x), next(nullptr) {}
-    ListNode(const vector<int>& v) : val(v[0]), next(nullptr) {
-        auto p = this;
-        for (size_t i = 1; i < v.size(); ++i) {
-            p->next = new ListNode(v[i]);
-            p = p->next;
-        }
-    }
-    vector<int> to_vector() {
-        auto p = this;
-        vector<int> v;
-        while (p) {
-            v.push_back(p->val);
-            p = p->next;
-        }
-        return v;
-    }
-};
-
-#pragma endregion
-
 #pragma region Vector Conversion
 
 // https://stackoverflow.com/a/29892589/9647779
@@ -100,7 +42,7 @@ struct Converter<int> { inline int operator()(const string& s) { return atoi(s.c
 
 template<>
 struct Converter<string> {
-    inline string operator()(const string& s) { 
+    inline string operator()(const string& s) {
         if (s.empty()) return s;
         if (s.front() == s.back() && (s.front() == '\"' || s.front() == '\'')) return s.substr(1, s.size() - 1);
         return s;
@@ -149,5 +91,133 @@ vector<vector<T>> str_to_mat(string&& s_) {
     }
     return result;
 }
+
+#pragma endregion
+
+#pragma region ListNode
+
+struct ListNode {
+    int val;
+    ListNode* next;
+    ListNode(int x) : val(x), next(nullptr) {}
+    ListNode(const vector<int>& v) : val(v[0]), next(nullptr) {
+        auto p = this;
+        for (size_t i = 1; i < v.size(); ++i) {
+            p->next = new ListNode(v[i]);
+            p = p->next;
+        }
+    }
+    ListNode(string&& s) : next(nullptr) {
+        vector<int> v = str_to_vec<int>(move(s));
+        val = v[0];
+        auto p = this;
+        for (size_t i = 1; i < v.size(); ++i) {
+            p->next = new ListNode(v[i]);
+            p = p->next;
+        }
+    }
+    vector<int> to_vector() const {
+        auto p = this;
+        vector<int> v;
+        while (p) {
+            v.push_back(p->val);
+            p = p->next;
+        }
+        return v;
+    }
+};
+
+#pragma endregion
+
+#pragma region TreeNode
+
+struct TreeNode {
+    int val;
+    TreeNode* left = nullptr;
+    TreeNode* right = nullptr;
+    TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
+    TreeNode(string&& s) {
+        assert(s.size() > 2);
+        assert(s.front() == '[' && s.back() == ']');
+        size_t pl = 1, pr = pl;
+        queue<TreeNode*> vec;
+        while (pr < s.size() - 1) {
+            pr = s.find(',', pl);
+            if (pr == -1) pr = s.size() - 1;
+            string subs = s.substr(pl, pr - pl);
+            subs = trim(subs);
+            if (subs == "null") vec.push(nullptr);
+            else vec.push(new TreeNode(stoi(subs)));
+            pl = pr + 1;
+        }
+        queue<TreeNode*> que;
+        TreeNode* head = vec.front();
+        this->val = head->val;
+        que.push(this); vec.pop();
+        while (!vec.empty()) {
+            que.front()->left = vec.front();
+            if (vec.front()) que.push(vec.front());
+            vec.pop();
+            if (vec.empty()) break;
+            que.front()->right = vec.front();
+            if (vec.front()) que.push(vec.front());
+            vec.pop();
+            que.pop();
+        }
+    }
+    vector<string> to_vector() const {
+        queue<const TreeNode*> que; que.push(this);
+        vector<string> s{ to_string(this->val) };
+        while (!que.empty()) {
+            const TreeNode* pl = que.front()->left;
+            const TreeNode* pr = que.front()->right;
+            s.push_back(pl ? to_string(pl->val) : "null");
+            s.push_back(pr ? to_string(pr->val) : "null");
+            if (pl) que.push(pl); if (pr) que.push(pr);
+            que.pop();
+        }
+        while (s.back() == "null") s.pop_back();
+        return s;
+    }
+};
+
+#pragma endregion
+
+#pragma region Display
+
+template <typename T>
+ostream& operator<<(ostream& os, const vector<T>& vec) {
+    if (vec.empty()) return (os << "[]");
+    os << "[ ";
+    for (size_t idx = 0; idx < vec.size(); ++idx) {
+        os << vec[idx];
+        if (idx < vec.size() - 1) os << ", ";
+    }
+    os << " ]";
+    return os;
+}
+
+template <typename T>
+ostream& operator<<(ostream& os, const vector<vector<T>>& vec) {
+    if (vec.empty()) {
+        os << "[-> [] <-]";
+        return os;
+    }
+    for (size_t idx = 0; idx < vec.size(); ++idx) {
+        if (idx == 0) {
+            os << "[-> " << vec[idx];
+            if (vec.size() == 1) os << " <-]";
+            else os << endl;
+        }
+        else if (idx == vec.size() - 1)
+            os << "[<- " << vec[idx];
+        else
+            os << "[   " << vec[idx] << endl;
+    }
+    return os;
+}
+
+ostream& operator<<(ostream& os, ListNode* l);
+ostream& operator<<(ostream& os, TreeNode* t);
 
 #pragma endregion

@@ -15,3 +15,13 @@ string& rtrim(string& str) {
 string& trim(string& str) {
     return ltrim(rtrim(str));
 }
+
+ostream& operator<<(ostream& os, ListNode* l) {
+    os << l->to_vector();
+    return os;
+}
+
+ostream& operator<<(ostream& os, TreeNode* t) {
+    os << t->to_vector();
+    return os;
+}
