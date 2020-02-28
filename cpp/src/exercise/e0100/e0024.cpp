@@ -18,7 +18,7 @@ public:
 };
 
 TEST(e0100, e0024) {
-    auto l = new ListNode({ 1, 2, 3, 4 });
-    auto ans = new ListNode({ 2, 1, 4, 3 });
+    auto l = new ListNode("[1,2,3,4]");
+    auto ans = new ListNode("[2,1,4,3]");
     ASSERT_THAT(Solution().swapPairs(l)->to_vector(), ans->to_vector());
 }
