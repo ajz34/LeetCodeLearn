@@ -1,6 +1,6 @@
 #include "extern.h"
 
-class Solution {
+class S0106 {
 public:
     TreeNode* buildTree(vector<int>& inorder, vector<int>& postorder) {
         assert(inorder.size() == postorder.size());
@@ -19,9 +19,10 @@ public:
     }
 };
 
-int main() {
+TEST(e0200, e0106) {
     vector<int> inorder, postorder;
     inorder = str_to_vec<int>("[9,3,15,20,7]");
     postorder = str_to_vec<int>("[9,15,7,20,3]");
     TreeNode* root = new TreeNode("[3,9,20,null,null,15,7]");
+    ASSERT_THAT(S0106().buildTree(inorder, postorder)->to_vector(), root->to_vector());
 }
