@@ -1,8 +1,8 @@
-// https://leetcode-cn.com/problems/convert-sorted-array-to-binary-search-tree/
+// https://leetcode-cn.com/problems/convert-sorted-list-to-binary-search-tree/
 
 #include "extern.h"
 
-class S0108 {
+class Solution {
 public:
     TreeNode* sortedArrayToBST(vector<int>& nums) {
         if (nums.empty()) return nullptr;
@@ -14,6 +14,12 @@ public:
         root->right = sortedArrayToBST(nums_right);
         return root;
     }
+    TreeNode* sortedListToBST(ListNode* head) {
+        vector<int> nums;
+        while (head) {
+            nums.push_back(head->val);
+            head = head->next;
+        }
+        return sortedArrayToBST(nums);
+    }
 };
-
-// No test because answer is not unique.
