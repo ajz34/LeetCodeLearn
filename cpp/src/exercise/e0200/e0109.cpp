@@ -2,7 +2,7 @@
 
 #include "extern.h"
 
-class Solution {
+class S0109 {
 public:
     TreeNode* sortedArrayToBST(vector<int>& nums) {
         if (nums.empty()) return nullptr;
