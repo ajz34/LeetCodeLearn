@@ -51,6 +51,10 @@
     <ClCompile Include="..\src\competition\week_177\e5170.cpp" />
     <ClCompile Include="..\src\competition\week_177\e5171.cpp" />
     <ClCompile Include="..\src\competition\week_177\e5172.cpp" />
+    <ClCompile Include="..\src\competition\week_178\e5344.cpp" />
+    <ClCompile Include="..\src\competition\week_178\e5345.cpp" />
+    <ClCompile Include="..\src\competition\week_178\e5346.cpp" />
+    <ClCompile Include="..\src\competition\week_178\e5347.cpp" />
     <ClCompile Include="..\src\exercise\e0100\e0001.cpp" />
     <ClCompile Include="..\src\exercise\e0100\e0002.cpp" />
     <ClCompile Include="..\src\exercise\e0100\e0003.cpp" />

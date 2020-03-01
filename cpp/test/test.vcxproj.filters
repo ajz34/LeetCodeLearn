@@ -372,6 +372,18 @@
     <ClCompile Include="..\src\exercise\e0200\e0111.cpp">
       <Filter>源文件\exercise\e0200</Filter>
     </ClCompile>
+    <ClCompile Include="..\src\competition\week_178\e5347.cpp">
+      <Filter>源文件\competition\week178</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\competition\week_178\e5346.cpp">
+      <Filter>源文件\competition\week178</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\competition\week_178\e5345.cpp">
+      <Filter>源文件\competition\week178</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\competition\week_178\e5344.cpp">
+      <Filter>源文件\competition\week178</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\src\extern.h">
@@ -408,6 +420,9 @@
     </Filter>
     <Filter Include="源文件\exercise\e0200">
       <UniqueIdentifier>{0825c79f-ab3b-4fba-8c4a-654c9996047d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\competition\week178">
+      <UniqueIdentifier>{2c03df05-2c84-41bb-a0b8-6f96c0b9b3e2}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>
