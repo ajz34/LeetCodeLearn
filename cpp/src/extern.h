@@ -92,6 +92,11 @@ vector<vector<T>> str_to_mat(string&& s_) {
     return result;
 }
 
+template<class T>
+set<T> vec_to_set(const vector<T>& v) {
+    return set<T>(v.begin(), v.end());
+}
+
 #pragma endregion
 
 #pragma region ListNode
