@@ -20,7 +20,7 @@ public:
 class S0116 {
 public:
     Node* connect(Node* root) {
-        if (!root->left) return root;
+        if (!root || !root->left) return root;
         connect(root->left);
         connect(root->right);
         Node* l = root->left;
