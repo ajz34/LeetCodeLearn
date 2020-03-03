@@ -6,7 +6,7 @@
 
 #include "extern.h"
 
-class Solution {
+class LCCI1001 {
 public:
     void merge(vector<int>& A, int m, vector<int>& B, int n) {
         int pA = m - 1, pB = n - 1, p = m + n - 1;
@@ -23,6 +23,6 @@ TEST(lcci, lcci1001) {
     vector<int> A = str_to_vec<int>("[1,2,3,0,0,0]");
     vector<int> B = str_to_vec<int>("[2,5,6]");
     vector<int> ans = str_to_vec<int>("[1,2,2,3,5,6]");
-    Solution().merge(A, 3, B, 3);
+    LCCI1001().merge(A, 3, B, 3);
     ASSERT_THAT(A, ans);
 }
