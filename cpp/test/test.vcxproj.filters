@@ -432,6 +432,12 @@
     <ClCompile Include="..\src\exercise\e0200\e0124.cpp">
       <Filter>源文件\exercise\e0200</Filter>
     </ClCompile>
+    <ClCompile Include="..\src\exercise\e1000\e0994.cpp">
+      <Filter>源文件\exercise\e1000</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\exercise\e0200\e0125.cpp">
+      <Filter>源文件\exercise\e0200</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\src\extern.h">
@@ -477,6 +483,9 @@
     </Filter>
     <Filter Include="源文件\exercise\lcci">
       <UniqueIdentifier>{92bbae80-2cc4-43ea-8c42-9473dcfce07d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\exercise\e1000">
+      <UniqueIdentifier>{5bfe32d7-ecf2-4069-b584-894225b88799}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>
