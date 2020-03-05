@@ -1,3 +1,5 @@
+// https://leetcode-cn.com/problems/distribute-candies-to-people/
+
 #include "extern.h"
 
 class S1103 {

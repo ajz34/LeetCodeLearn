@@ -1,3 +1,5 @@
+// https://leetcode-cn.com/problems/word-ladder/
+
 #include "extern.h"
 
 class S0127 {
