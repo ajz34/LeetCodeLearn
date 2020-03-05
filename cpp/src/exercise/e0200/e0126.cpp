@@ -3,59 +3,121 @@
 #include "extern.h"
 
 class S0126 {
-public:
-    vector<vector<string>> findLadders(string beginWord, string endWord, vector<string>& wordList) {
-        unordered_set<string> words(wordList.begin(), wordList.end());
-        if (words.count(endWord) == 0) return {};
-        unordered_set<string> begin;
-        begin.insert(beginWord);
-        unordered_set<string> end;
-        end.insert(endWord);
-        unordered_map<string, vector<string>> neighbors;
-        if (!bfs(begin, end, neighbors, true, words)) return {};
-        vector<vector<string>> ret;
-        vector<string> path;
-        dfs(neighbors, beginWord, endWord, ret, path);
-        return ret;
+
+    bool is_diff1(const string& s1, const string& s2) {
+        assert(s1.size() == s2.size());
+        int dif = 0;
+        for (int i = 0; i < s1.size(); ++i) {
+            if (s1[i] != s2[i])
+                if (dif++ >= 1) return false;
+        }
+        return dif == 1;
     }
 
-    bool bfs(unordered_set<string>& begin, unordered_set<string>& end, unordered_map<string, vector<string>>& neighbors,
-        bool forward, unordered_set<string>& words) {
-        if (begin.size() == 0) return false;
-        for (string s : begin) words.erase(s);
-        bool meet = false;
-        unordered_set<string> next;
-        for (string b : begin) {
-            for (int n = 0; n < b.size(); n++) {
-                string w = b;
-                for (char i = 'a'; i <= 'z'; i++) {
-                    w[n] = i;
-                    if (!words.count(w)) continue;
-                    next.insert(w);
-                    string k = forward ? b : w;
-                    string v = forward ? w : b;
-                    if (!neighbors.count(k)) neighbors.insert(pair<string, vector<string>>(k, vector<string>()));
-                    neighbors[k].push_back(v);
-                    if (end.count(w)) meet = true;
+    void bfs_process(
+        unordered_set<int>& lst_valid,
+        unordered_set<int>& lst_bfs_layer,
+        unordered_map<int, vector<vector<int>>>& res_bfs,
+        const vector<string>& wordList) {
+
+        unordered_map<int, unordered_set<int>> lst_map;
+        unordered_set<int> lst_next_layer;
+
+        for (auto idx_bfs : lst_bfs_layer) {
+            for (auto idx_next : lst_valid)
+                if (is_diff1(wordList[idx_bfs], wordList[idx_next])) {
+                    lst_map[idx_bfs].insert(idx_next);
+                    lst_next_layer.insert(idx_next);
+                }
+        }
+
+        for (auto idx_next : lst_next_layer)
+            lst_valid.erase(idx_next);
+
+        unordered_map<int, vector<vector<int>>> res_next;
+        for (auto p : res_bfs) {
+            for (auto& v : p.second) {
+                for (auto idx : lst_map[p.first]) {
+                    res_next[idx].push_back(v);
+                    res_next[idx].back().push_back(idx);
                 }
             }
         }
-        if (meet) return true;
-        if (next.size() > end.size()) return bfs(end, next, neighbors, !forward, words);
-        return bfs(next, end, neighbors, forward, words);
+
+        swap(lst_bfs_layer, lst_next_layer);
+        swap(res_bfs, res_next);
     }
 
-    void dfs(unordered_map<string, vector<string>>& neighbors, string& begin, string& end, vector<vector<string>>& ret, vector<string>& path) {
-        if (ret.size() > 0 && path.size() == 0) return;
-        path.push_back(begin);
-        if (begin == end) {
-            ret.emplace_back(path);
+    bool is_interset_empty(unordered_set<int>& s1, unordered_set<int>& s2) {
+        unordered_set<int>* pl = (s1.size() < s2.size() ? &s1 : &s2);
+        unordered_set<int>* pu = (s1.size() < s2.size() ? &s2 : &s1);
+        for (auto v : *pl)
+            if (pu->find(v) != pu->end()) return false;
+        return true;
+    }
+
+    vector<vector<int>> concate_res(
+        const unordered_map<int, vector<vector<int>>>& res_top,
+        const unordered_map<int, vector<vector<int>>>& res_bot) {
+
+        vector<vector<int>> result;
+        for (auto& pt : res_top) {
+            if (res_bot.find(pt.first) == res_bot.end()) continue;
+            for (auto& vb : res_bot.at(pt.first)) {
+                for (auto& vt : pt.second) {
+                    vector<int> v{ vt };
+                    for (int i = vb.size() - 1; i-- > 0;)
+                        v.push_back(vb[i]);
+                    result.push_back(v);
+                }
+            }
         }
-        else if (neighbors.count(begin)) {
-            for (string n : neighbors[begin])
-                dfs(neighbors, n, end, ret, path);
+        return result;
+    }
+
+    template<class T>
+    vector<vector<T>> matrix_mapping(const vector<vector<int>>& mat, const vector<T>& lst) {
+        vector<vector<T>> result;
+        for (auto& v : mat) {
+            result.push_back({});
+            vector<T>& rb = result.back();
+            for (auto& i : v)
+                rb.push_back(lst[i]);
         }
-        path.erase(path.end() - 1);
+        return result;
+    }
+
+public:
+    vector<vector<string>> findLadders(string beginWord, string endWord, vector<string>& wordList) {
+        auto p_end_word = find(wordList.begin(), wordList.end(), endWord);
+        if (p_end_word == wordList.end()) return {};
+        int idx_end_word = p_end_word - wordList.begin();
+        wordList.push_back(beginWord);
+        int s_size = wordList.size();
+        int idx_begin_word = s_size - 1;
+
+        unordered_set<int> valid_lst;
+        for (int i = 0; i < s_size; ++i)
+            valid_lst.insert(i);
+
+        unordered_set<int> lst_top_layer{ idx_begin_word }, lst_bot_layer{ idx_end_word };
+        unordered_set<int> lst_top_valid{ valid_lst }, lst_bot_valid{ valid_lst };
+        unordered_map<int, vector<vector<int>>> res_top, res_bot;
+        res_top[idx_begin_word] = { { idx_begin_word } };
+        res_bot[idx_end_word] = { { idx_end_word } };
+        lst_top_valid.erase(idx_begin_word);
+        lst_bot_valid.erase(idx_end_word);
+
+        while (true) {
+            bfs_process(lst_top_valid, lst_top_layer, res_top, wordList);
+            if (!is_interset_empty(lst_top_layer, lst_bot_layer)) break;
+            bfs_process(lst_bot_valid, lst_bot_layer, res_bot, wordList);
+            if (!is_interset_empty(lst_top_layer, lst_bot_layer)) break;
+            if (lst_top_layer.empty() || lst_bot_layer.empty()) return {};
+        }
+
+        vector<vector<int>> result_idx = concate_res(res_top, res_bot);
+        return matrix_mapping<string>(result_idx, wordList);
     }
 };
 
