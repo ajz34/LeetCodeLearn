@@ -2,7 +2,7 @@
 
 #include "extern.h"
 
-class Solution {
+class S0128 {
 public:
     int longestConsecutive(vector<int>& nums) {
         if (nums.empty()) return 0;
@@ -35,5 +35,5 @@ public:
 TEST(e0200, e0128) {
     vector<int> nums;
     nums = str_to_vec<int>("[100, 4, 200, 1, 3, 2]");
-    ASSERT_EQ(Solution().longestConsecutive(nums), 4);
+    ASSERT_EQ(S0128().longestConsecutive(nums), 4);
 }
