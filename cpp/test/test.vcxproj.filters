@@ -444,6 +444,9 @@
     <ClCompile Include="..\src\exercise\e0200\e0127.cpp">
       <Filter>源文件\exercise\e0200</Filter>
     </ClCompile>
+    <ClCompile Include="..\src\exercise\e1200\e1103.cpp">
+      <Filter>源文件\exercise\e1200</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\src\extern.h">
@@ -492,6 +495,9 @@
     </Filter>
     <Filter Include="源文件\exercise\e1000">
       <UniqueIdentifier>{5bfe32d7-ecf2-4069-b584-894225b88799}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\exercise\e1200">
+      <UniqueIdentifier>{fd09a4ff-3b0d-4535-8f7c-657a6bf33228}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>
