@@ -38,7 +38,7 @@ public:
 };
 
 TEST(e0200, e0131) {
-    auto res = S0131().partition("aaabba");
+    auto res = S0131().partition("aab");
     vector<vector<string>> ans{ {"a", "a", "b"}, {"aa", "b"} };
     ASSERT_THAT(vec_to_set<vector<string>>(res), vec_to_set<vector<string>>(ans));
 }
