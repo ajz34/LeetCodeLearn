@@ -1,8 +1,9 @@
 #include "extern.h"
 
 // ºÄÊ±£º0:09:39
+// ´íÎó´ÎÊý£º0
 
-class Solution {
+class LCOF5702 {
 public:
     vector<vector<int>> findContinuousSequence(int target) {
         vector<pair<int, int>> res_pair{};
@@ -29,7 +30,7 @@ public:
 TEST(lcof, lcof5702) {
     vector<vector<int>> ans;
     ans = str_to_mat<int>("[[2,3,4],[4,5]]");
-    cout << Solution().findContinuousSequence(9) << endl;
+    cout << LCOF5702().findContinuousSequence(9) << endl;
     ans = str_to_mat<int>("[[2,3,4],[4,5]]");
-    cout << Solution().findContinuousSequence(15) << endl;
+    cout << LCOF5702().findContinuousSequence(15) << endl;
 }
