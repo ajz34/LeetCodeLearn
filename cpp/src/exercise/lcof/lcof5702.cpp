@@ -1,5 +1,7 @@
 #include "extern.h"
 
+// ºÄÊ±£º0:09:39
+
 class Solution {
 public:
     vector<vector<int>> findContinuousSequence(int target) {
@@ -24,7 +26,10 @@ public:
     }
 };
 
-int main() {
-    cout << Solution().findContinuousSequence(0) << endl;
+TEST(lcof, lcof5702) {
+    vector<vector<int>> ans;
+    ans = str_to_mat<int>("[[2,3,4],[4,5]]");
+    cout << Solution().findContinuousSequence(9) << endl;
+    ans = str_to_mat<int>("[[2,3,4],[4,5]]");
     cout << Solution().findContinuousSequence(15) << endl;
 }
