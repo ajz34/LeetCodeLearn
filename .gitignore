@@ -1,4 +1,6 @@
 # ajz34
+# temporarily exclude main.cpp
+main.cpp
 tmp*
 
 # ajz34 IDE Setting
