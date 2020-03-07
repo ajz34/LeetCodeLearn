@@ -185,6 +185,8 @@
     <ClCompile Include="..\src\exercise\e0200\e0129.cpp" />
     <ClCompile Include="..\src\exercise\e0200\e0130.cpp" />
     <ClCompile Include="..\src\exercise\e0200\e0131.cpp" />
+    <ClCompile Include="..\src\exercise\e0200\e0132.cpp" />
+    <ClCompile Include="..\src\exercise\e0200\e0133.cpp" />
     <ClCompile Include="..\src\exercise\e0200\e0136.cpp" />
     <ClCompile Include="..\src\exercise\e0200\e0137.cpp" />
     <ClCompile Include="..\src\exercise\e0300\e0206.cpp" />
@@ -193,6 +195,7 @@
     <ClCompile Include="..\src\exercise\e1200\e1103.cpp" />
     <ClCompile Include="..\src\exercise\lcci\lcci1001.cpp" />
     <ClCompile Include="..\src\exercise\lcof\lcof5702.cpp" />
+    <ClCompile Include="..\src\exercise\lcof\lcof5902.cpp" />
     <ClCompile Include="..\src\extern.cpp" />
   </ItemGroup>
   <ItemGroup>
