@@ -489,6 +489,9 @@
     <ClCompile Include="..\src\exercise\e0200\e0139.cpp">
       <Filter>源文件\exercise\e0200</Filter>
     </ClCompile>
+    <ClCompile Include="..\src\exercise\e0400\e0322.cpp">
+      <Filter>源文件\exercise\e0400</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\src\extern.h">
@@ -543,6 +546,9 @@
     </Filter>
     <Filter Include="源文件\exercise\lcof">
       <UniqueIdentifier>{db03ac71-1dd1-46b0-bd98-f1e4ef1364b2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\exercise\e0400">
+      <UniqueIdentifier>{d27a7d10-681e-4a2f-87cf-5d22fc83e55b}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>
