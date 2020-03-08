@@ -492,6 +492,18 @@
     <ClCompile Include="..\src\exercise\e0400\e0322.cpp">
       <Filter>源文件\exercise\e0400</Filter>
     </ClCompile>
+    <ClCompile Include="..\src\competition\double_21\e5336.cpp">
+      <Filter>源文件\competition\double21</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\competition\double_21\e5337.cpp">
+      <Filter>源文件\competition\double21</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\competition\double_21\e5338.cpp">
+      <Filter>源文件\competition\double21</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\competition\double_21\e5339.cpp">
+      <Filter>源文件\competition\double21</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\src\extern.h">
@@ -549,6 +561,9 @@
     </Filter>
     <Filter Include="源文件\exercise\e0400">
       <UniqueIdentifier>{d27a7d10-681e-4a2f-87cf-5d22fc83e55b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\competition\double21">
+      <UniqueIdentifier>{2e52eece-22fb-4253-ba5a-ea778b1943a1}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>
