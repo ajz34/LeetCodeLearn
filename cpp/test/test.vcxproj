@@ -202,6 +202,7 @@
     <ClCompile Include="..\src\exercise\e0200\e0138.cpp" />
     <ClCompile Include="..\src\exercise\e0200\e0139.cpp" />
     <ClCompile Include="..\src\exercise\e0200\e0140.cpp" />
+    <ClCompile Include="..\src\exercise\e0200\e0141.cpp" />
     <ClCompile Include="..\src\exercise\e0300\e0206.cpp" />
     <ClCompile Include="..\src\exercise\e0300\e0225.cpp" />
     <ClCompile Include="..\src\exercise\e0400\e0322.cpp" />
