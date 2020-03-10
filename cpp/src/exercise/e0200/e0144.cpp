@@ -2,7 +2,7 @@
 
 #include "extern.h"
 
-class Solution {
+class S0144 {
 public:
     vector<int> preorderTraversal(TreeNode* root) {
         if (!root) return {};
@@ -22,5 +22,5 @@ public:
 TEST(e0200, e0144) {
     TreeNode* root = new TreeNode("[1,2,3,4,5,6,7]");
     vector<int> ans = str_to_vec<int>("[1,2,4,5,3,6,7]");
-    ASSERT_THAT(Solution().preorderTraversal(root), ans);
+    ASSERT_THAT(S0144().preorderTraversal(root), ans);
 }
