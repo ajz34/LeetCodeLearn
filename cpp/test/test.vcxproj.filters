@@ -597,6 +597,21 @@
     <ClCompile Include="..\src\exercise\e0200\e0167.cpp">
       <Filter>源文件\exercise\e0200</Filter>
     </ClCompile>
+    <ClCompile Include="..\src\exercise\e0700\e0695.cpp">
+      <Filter>源文件\exercise\e0700</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\competition\week_180\e5179.cpp">
+      <Filter>源文件\competition\week180</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\competition\week_180\e5356.cpp">
+      <Filter>源文件\competition\week180</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\competition\week_180\e5357.cpp">
+      <Filter>源文件\competition\week180</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\competition\week_180\e5359.cpp">
+      <Filter>源文件\competition\week180</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\src\extern.h">
@@ -666,6 +681,12 @@
     </Filter>
     <Filter Include="源文件\exercise\e1100">
       <UniqueIdentifier>{ab7000bd-0374-4752-a55a-f4741c69003b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\exercise\e0700">
+      <UniqueIdentifier>{6a34dd5d-1843-4b0a-97ce-76051310fa8e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\competition\week180">
+      <UniqueIdentifier>{b706f4a1-b549-4daa-b9ec-1252c75394ea}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

@@ -63,6 +63,10 @@
     <ClCompile Include="..\src\competition\week_179\e5353.cpp" />
     <ClCompile Include="..\src\competition\week_179\e5354.cpp" />
     <ClCompile Include="..\src\competition\week_179\e5355.cpp" />
+    <ClCompile Include="..\src\competition\week_180\e5179.cpp" />
+    <ClCompile Include="..\src\competition\week_180\e5356.cpp" />
+    <ClCompile Include="..\src\competition\week_180\e5357.cpp" />
+    <ClCompile Include="..\src\competition\week_180\e5359.cpp" />
     <ClCompile Include="..\src\exercise\e0100\e0001.cpp" />
     <ClCompile Include="..\src\exercise\e0100\e0002.cpp" />
     <ClCompile Include="..\src\exercise\e0100\e0003.cpp" />
@@ -229,6 +233,7 @@
     <ClCompile Include="..\src\exercise\e0300\e0300.cpp" />
     <ClCompile Include="..\src\exercise\e0400\e0322.cpp" />
     <ClCompile Include="..\src\exercise\e0600\e0543.cpp" />
+    <ClCompile Include="..\src\exercise\e0700\e0695.cpp" />
     <ClCompile Include="..\src\exercise\e1000\e0994.cpp" />
     <ClCompile Include="..\src\exercise\e1100\e1013.cpp" />
     <ClCompile Include="..\src\exercise\e1100\e1071.cpp" />
