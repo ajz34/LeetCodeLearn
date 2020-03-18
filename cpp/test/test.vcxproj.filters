@@ -642,6 +642,9 @@
     <ClCompile Include="..\src\exercise\e0200\e0189.cpp">
       <Filter>源文件\exercise\e0200</Filter>
     </ClCompile>
+    <ClCompile Include="..\src\exercise\e0900\e0836.cpp">
+      <Filter>源文件\exercise\e0900</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\src\extern.h">
@@ -717,6 +720,9 @@
     </Filter>
     <Filter Include="源文件\competition\week180">
       <UniqueIdentifier>{b706f4a1-b549-4daa-b9ec-1252c75394ea}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\exercise\e0900">
+      <UniqueIdentifier>{416cebdf-cb5c-4383-a183-8f7739240fcf}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>
