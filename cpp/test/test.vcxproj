@@ -257,6 +257,7 @@
     <ClCompile Include="..\src\exercise\e1200\e1160.cpp" />
     <ClCompile Include="..\src\exercise\lcci\lcci0106.cpp" />
     <ClCompile Include="..\src\exercise\lcci\lcci1001.cpp" />
+    <ClCompile Include="..\src\exercise\lcof\lcof4000.cpp" />
     <ClCompile Include="..\src\exercise\lcof\lcof5702.cpp" />
     <ClCompile Include="..\src\exercise\lcof\lcof5902.cpp" />
     <ClCompile Include="..\src\extern.cpp" />
