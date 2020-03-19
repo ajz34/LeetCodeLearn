@@ -36,5 +36,5 @@ TEST(lcof, lcof4000) {
     ASSERT_THAT(vec_to_set(LCOF4000().getLeastNumbers(arr, 2)), vec_to_set(ans));
     arr = str_to_vec<int>("[0,1,2,1]");
     ans = str_to_vec<int>("[0]");
-    ASSERT_THAT(vec_to_set(LCOF4000().getLeastNumbers(arr, 2)), vec_to_set(ans));
+    ASSERT_THAT(vec_to_set(LCOF4000().getLeastNumbers(arr, 1)), vec_to_set(ans));
 }
