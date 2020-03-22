@@ -22,3 +22,7 @@ TEST(week181, e5367) {
     ASSERT_EQ(S5367().longestPrefix("leetcodeleet"), "leet");
     ASSERT_EQ(S5367().longestPrefix("a"), "");
 }
+
+/* 发布题解：C++ 8 行无脑 KMP 与详解 LPS Table 构造过程，复杂度 O(n)
+   https://leetcode-cn.com/problems/longest-happy-prefix/solution/c-8-xing-wu-nao-kmpfu-za-du-on-dai-geng-xin-by-ajz/
+*/
