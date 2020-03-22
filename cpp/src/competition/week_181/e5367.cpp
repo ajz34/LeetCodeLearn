@@ -1,0 +1,24 @@
+// https://leetcode-cn.com/problems/longest-happy-prefix/
+
+#include "extern.h"
+
+class S5367 {
+public:
+    string longestPrefix(string s) {
+        vector<int> lps(s.size(), 0);
+        size_t i = 0, j = 1;
+        while (j < s.size()) {
+            if (s[i] == s[j]) lps[j++] = (i++) + 1;  // situ.1
+            else if (i != 0) i = lps[i - 1];                   // situ.2
+            else lps[j++] = 0;
+        }
+        return s.substr(0, lps.back());
+    }
+};
+
+TEST(week181, e5367) {
+    ASSERT_EQ(S5367().longestPrefix("level"), "l");
+    ASSERT_EQ(S5367().longestPrefix("ababab"), "abab");
+    ASSERT_EQ(S5367().longestPrefix("leetcodeleet"), "leet");
+    ASSERT_EQ(S5367().longestPrefix("a"), "");
+}
