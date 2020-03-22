@@ -47,6 +47,10 @@
     <ClCompile Include="..\src\competition\double_21\e5337.cpp" />
     <ClCompile Include="..\src\competition\double_21\e5338.cpp" />
     <ClCompile Include="..\src\competition\double_21\e5339.cpp" />
+    <ClCompile Include="..\src\competition\double_22\e5348.cpp" />
+    <ClCompile Include="..\src\competition\double_22\e5349.cpp" />
+    <ClCompile Include="..\src\competition\double_22\e5350.cpp" />
+    <ClCompile Include="..\src\competition\double_22\e5351.cpp" />
     <ClCompile Include="..\src\competition\week_176\e5340.cpp" />
     <ClCompile Include="..\src\competition\week_176\e5341.cpp" />
     <ClCompile Include="..\src\competition\week_176\e5342.cpp" />
