@@ -261,6 +261,7 @@
     <ClCompile Include="..\src\exercise\e0600\e0543.cpp" />
     <ClCompile Include="..\src\exercise\e0700\e0695.cpp" />
     <ClCompile Include="..\src\exercise\e0900\e0836.cpp" />
+    <ClCompile Include="..\src\exercise\e0900\e0876.cpp" />
     <ClCompile Include="..\src\exercise\e1000\e0945.cpp" />
     <ClCompile Include="..\src\exercise\e1000\e0994.cpp" />
     <ClCompile Include="..\src\exercise\e1100\e1013.cpp" />
