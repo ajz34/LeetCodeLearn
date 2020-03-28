@@ -262,6 +262,7 @@
     <ClCompile Include="..\src\exercise\e0500\e0409.cpp" />
     <ClCompile Include="..\src\exercise\e0600\e0543.cpp" />
     <ClCompile Include="..\src\exercise\e0700\e0695.cpp" />
+    <ClCompile Include="..\src\exercise\e0900\e0820.cpp" />
     <ClCompile Include="..\src\exercise\e0900\e0836.cpp" />
     <ClCompile Include="..\src\exercise\e0900\e0876.cpp" />
     <ClCompile Include="..\src\exercise\e0900\e0892.cpp" />
