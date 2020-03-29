@@ -1,6 +1,8 @@
+// https://leetcode-cn.com/problems/as-far-from-land-as-possible/
+
 #include "extern.h"
 
-class Solution {
+class S1162 {
     struct Coord {
         int row = -1;
         int col = -1;
@@ -35,9 +37,9 @@ public:
             result += 1;
             for (auto& crd : bfs_prev) {
                 int r = crd.row, c = crd.col;
-                if (r > 0 && grid[r - 1][c] == 0)          { bfs_next.push_back({ r - 1, c }); grid[r - 1][c] = 1; }
+                if (r > 0 && grid[r - 1][c] == 0) { bfs_next.push_back({ r - 1, c }); grid[r - 1][c] = 1; }
                 if (r < r_size - 1 && grid[r + 1][c] == 0) { bfs_next.push_back({ r + 1, c }); grid[r + 1][c] = 1; }
-                if (c > 0 && grid[r][c - 1] == 0)          { bfs_next.push_back({ r, c - 1 }); grid[r][c - 1] = 1; }
+                if (c > 0 && grid[r][c - 1] == 0) { bfs_next.push_back({ r, c - 1 }); grid[r][c - 1] = 1; }
                 if (c < c_size - 1 && grid[r][c + 1] == 0) { bfs_next.push_back({ r, c + 1 }); grid[r][c + 1] = 1; }
             }
             swap(bfs_prev, bfs_next);
@@ -46,10 +48,10 @@ public:
     }
 };
 
-int main() {
+TEST(e1200, e1162) {
     vector<vector<int>> grid;
     grid = str_to_mat<int>("[[1,0,1],[0,0,0],[1,0,1]]");
-    cout << Solution().maxDistance(grid) << endl;
+    ASSERT_EQ(S1162().maxDistance(grid), 2);
     grid = str_to_mat<int>("[[1,0,0],[0,0,0],[0,0,0]]");
-    cout << Solution().maxDistance(grid) << endl;
+    ASSERT_EQ(S1162().maxDistance(grid), 4);
 }
